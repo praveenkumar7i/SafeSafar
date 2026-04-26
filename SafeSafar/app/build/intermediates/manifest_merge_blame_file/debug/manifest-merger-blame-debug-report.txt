@@ -1,0 +1,273 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.safesafar"
+4    android:versionCode="2"
+5    android:versionName="2.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:4:5-79
+11-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:4:22-76
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:5:5-81
+12-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:5:22-78
+13    <uses-permission android:name="android.permission.SEND_SMS" />
+13-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:6:5-67
+13-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:6:22-64
+14    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+14-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:7:5-71
+14-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:7:22-68
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:8:5-77
+15-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:8:22-74
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:9:5-67
+16-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:9:22-64
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:10:5-66
+17-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:10:22-63
+18    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+18-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:11:5-75
+18-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:11:22-72
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+19-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:12:5-80
+19-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:12:22-77
+20    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+20-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:13:5-95
+20-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:13:22-92
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0] C:\Users\prave\.gradle\caches\transforms-3\c001b48ec7403c06e7148d21203712a7\transformed\jetified-core-12.1.0\AndroidManifest.xml:8:5-79
+21-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0] C:\Users\prave\.gradle\caches\transforms-3\c001b48ec7403c06e7148d21203712a7\transformed\jetified-core-12.1.0\AndroidManifest.xml:8:22-76
+22
+23    <uses-feature
+23-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
+24        android:glEsVersion="0x00020000"
+24-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:27:9-41
+25        android:required="true" />
+25-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
+26
+27    <queries>
+27-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:30:5-34:15
+28
+29        <!-- Needs to be explicitly declared on Android R+ -->
+30        <package android:name="com.google.android.apps.maps" />
+30-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
+30-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:18-61
+31    </queries>
+32
+33    <permission
+33-->[androidx.core:core:1.9.0] C:\Users\prave\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+34        android:name="com.example.safesafar.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+34-->[androidx.core:core:1.9.0] C:\Users\prave\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+35        android:protectionLevel="signature" />
+35-->[androidx.core:core:1.9.0] C:\Users\prave\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+36
+37    <uses-permission android:name="com.example.safesafar.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+37-->[androidx.core:core:1.9.0] C:\Users\prave\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+37-->[androidx.core:core:1.9.0] C:\Users\prave\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+38
+39    <application
+39-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:14:5-45:19
+40        android:allowBackup="true"
+40-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:15:9-35
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.9.0] C:\Users\prave\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+42        android:debuggable="true"
+43        android:icon="@mipmap/ic_launcher"
+43-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:15:36-70
+44        android:label="@string/app_name"
+44-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:15:71-103
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:9-54
+46        android:supportsRtl="true"
+46-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:55-81
+47        android:testOnly="true"
+48        android:theme="@style/Theme.SafeSafar" >
+48-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:82-120
+49        <activity
+49-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:9-22:20
+50            android:name="com.example.safesafar.MainActivity"
+50-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:19-47
+51            android:exported="true"
+51-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:48-71
+52            android:theme="@style/Theme.SafeSafar" >
+52-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:72-110
+53            <intent-filter>
+53-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:18:13-21:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:19:17-69
+54-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:19:25-66
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:20:17-77
+56-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:20:27-74
+57            </intent-filter>
+58        </activity>
+59        <activity
+59-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:23:9-101
+60            android:name="com.example.safesafar.ui.FakeCallSetupActivity"
+60-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:23:19-59
+61            android:theme="@style/Theme.SafeSafar" />
+61-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:23:60-98
+62        <activity
+62-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:9-96
+63            android:name="com.example.safesafar.ui.FakeCallActivity"
+63-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:19-54
+64            android:theme="@style/Theme.SafeSafar" />
+64-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:55-93
+65        <activity
+65-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:9-96
+66            android:name="com.example.safesafar.ui.ContactsActivity"
+66-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:19-54
+67            android:theme="@style/Theme.SafeSafar" />
+67-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:55-93
+68        <activity
+68-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:9-96
+69            android:name="com.example.safesafar.ui.FollowMeActivity"
+69-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:19-54
+70            android:theme="@style/Theme.SafeSafar" />
+70-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:55-93
+71        <activity
+71-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:9-98
+72            android:name="com.example.safesafar.ui.SafetyTipsActivity"
+72-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:19-56
+73            android:theme="@style/Theme.SafeSafar" />
+73-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:57-95
+74        <activity
+74-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:9-99
+75            android:name="com.example.safesafar.ui.SelfDefenseActivity"
+75-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:19-57
+76            android:theme="@style/Theme.SafeSafar" />
+76-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:58-96
+77        <activity
+77-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:9-99
+78            android:name="com.example.safesafar.ui.VideoPlayerActivity"
+78-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:19-57
+79            android:theme="@style/Theme.SafeSafar" />
+79-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:58-96
+80        <activity
+80-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:9-96
+81            android:name="com.example.safesafar.ui.SettingsActivity"
+81-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:19-54
+82            android:theme="@style/Theme.SafeSafar" />
+82-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:55-93
+83
+84        <service
+84-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:9-154
+85            android:name="com.example.safesafar.service.SosService"
+85-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:18-52
+86            android:enabled="true"
+86-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:53-75
+87            android:exported="false"
+87-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:76-100
+88            android:foregroundServiceType="location|microphone" />
+88-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:101-152
+89
+90        <provider
+91            android:name="androidx.core.content.FileProvider"
+91-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:34:13-62
+92            android:authorities="com.example.safesafar.provider"
+92-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:35:13-60
+93            android:exported="false"
+93-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:36:13-37
+94            android:grantUriPermissions="true" >
+94-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:37:13-47
+95            <meta-data
+95-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:38:13-40:58
+96                android:name="android.support.FILE_PROVIDER_PATHS"
+96-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:39:17-67
+97                android:resource="@xml/provider_paths" />
+97-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:40:17-55
+98        </provider>
+99
+100        <meta-data
+100-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:42:9-44:44
+101            android:name="com.google.android.geo.API_KEY"
+101-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:43:13-58
+102            android:value="YOUR_API_KEY" />
+102-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:44:13-41
+103        <!-- Needs to be explicitly declared on P+ -->
+104        <uses-library
+104-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+105            android:name="org.apache.http.legacy"
+105-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+106            android:required="false" />
+106-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+107
+108        <activity
+108-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\prave\.gradle\caches\transforms-3\bcc3139f25dab074e071f3795b624b0b\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+109            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+109-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\prave\.gradle\caches\transforms-3\bcc3139f25dab074e071f3795b624b0b\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+110            android:exported="false"
+110-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\prave\.gradle\caches\transforms-3\bcc3139f25dab074e071f3795b624b0b\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+111            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+111-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\prave\.gradle\caches\transforms-3\bcc3139f25dab074e071f3795b624b0b\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+112
+113        <meta-data
+113-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\prave\.gradle\caches\transforms-3\9456f475ea18ece41b0e1f623957d888\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+114            android:name="com.google.android.gms.version"
+114-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\prave\.gradle\caches\transforms-3\9456f475ea18ece41b0e1f623957d888\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+115            android:value="@integer/google_play_services_version" />
+115-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\prave\.gradle\caches\transforms-3\9456f475ea18ece41b0e1f623957d888\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+116
+117        <provider
+117-->[androidx.emoji2:emoji2:1.2.0] C:\Users\prave\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+118            android:name="androidx.startup.InitializationProvider"
+118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\prave\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+119            android:authorities="com.example.safesafar.androidx-startup"
+119-->[androidx.emoji2:emoji2:1.2.0] C:\Users\prave\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+120            android:exported="false" >
+120-->[androidx.emoji2:emoji2:1.2.0] C:\Users\prave\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+121            <meta-data
+121-->[androidx.emoji2:emoji2:1.2.0] C:\Users\prave\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+122                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+122-->[androidx.emoji2:emoji2:1.2.0] C:\Users\prave\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+123                android:value="androidx.startup" />
+123-->[androidx.emoji2:emoji2:1.2.0] C:\Users\prave\.gradle\caches\transforms-3\a44fe69b7f5ac0e141d6bda2f04e92a5\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+124            <meta-data
+124-->[androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\prave\.gradle\caches\transforms-3\0eca4f277f260fc683c046115c797f29\transformed\jetified-lifecycle-process-2.6.0\AndroidManifest.xml:29:13-31:52
+125                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+125-->[androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\prave\.gradle\caches\transforms-3\0eca4f277f260fc683c046115c797f29\transformed\jetified-lifecycle-process-2.6.0\AndroidManifest.xml:30:17-78
+126                android:value="androidx.startup" />
+126-->[androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\prave\.gradle\caches\transforms-3\0eca4f277f260fc683c046115c797f29\transformed\jetified-lifecycle-process-2.6.0\AndroidManifest.xml:31:17-49
+127            <meta-data
+127-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:30:13-32:52
+128                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+128-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:31:17-85
+129                android:value="androidx.startup" />
+129-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:32:17-49
+130        </provider>
+131
+132        <receiver
+132-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:35:9-47:20
+133            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+133-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:36:13-76
+134            android:directBootAware="false"
+134-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:37:13-44
+135            android:enabled="true"
+135-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:38:13-35
+136            android:exported="true"
+136-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:39:13-36
+137            android:permission="android.permission.DUMP" >
+137-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:40:13-57
+138            <intent-filter>
+138-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:41:13-43:29
+139                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+139-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:42:17-91
+139-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:42:25-88
+140            </intent-filter>
+141            <intent-filter>
+141-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:44:13-46:29
+142                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+142-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:45:17-85
+142-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\prave\.gradle\caches\transforms-3\078fb5a5d52320d701ad50d54d6f1501\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:45:25-82
+143            </intent-filter>
+144        </receiver>
+145    </application>
+146
+147</manifest>

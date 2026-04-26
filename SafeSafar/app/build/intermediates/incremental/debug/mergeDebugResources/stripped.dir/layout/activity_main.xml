@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEmergency" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="24dp"
+        android:src="@android:drawable/ic_dialog_alert" app:backgroundTint="@color/sos_red" app:tint="@color/white" />
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="80dp">
+
+            <!-- Floating Alert Bar -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:background="@color/accent_purple" android:gravity="center_vertical" android:paddingHorizontal="12dp">
+                <TextView android:id="@+id/tvTicker" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Stay Alert ⚠️   •   Location shared successfully 📍   •   Emergency mode active 🚨   •   "
+                    android:textColor="@color/white" android:textStyle="bold" android:textSize="14sp"
+                    android:singleLine="true" android:ellipsize="marquee" android:marqueeRepeatLimit="marquee_forever" android:focusable="true" android:focusableInTouchMode="true"/>
+            </LinearLayout>
+
+            <!-- Top Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/transparent_purple"
+                android:gravity="center"
+                android:orientation="vertical">
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@android:drawable/ic_secure"
+                        app:tint="@color/accent_purple"
+                        android:layout_marginEnd="8dp"/>
+                        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SafeSafar"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_purple"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stay Alert | Emergency Ready"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- SOS Section -->
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="24dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Are you in an emergency?" android:textSize="20sp" android:textColor="@color/text_dark" android:textStyle="bold" android:layout_marginBottom="32dp"/>
+                    
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <!-- Soft glowing effect -->
+                        <ImageView android:layout_width="300dp" android:layout_height="300dp" android:src="@drawable/sos_glow" android:layout_gravity="center" android:scaleType="centerInside" android:alpha="0.8"/>
+                        <!-- Slow pulse animation -->
+                        <com.airbnb.lottie.LottieAnimationView android:id="@+id/lottieSosPulse" android:layout_width="280dp" android:layout_height="280dp" android:layout_gravity="center" app:lottie_rawRes="@raw/pulse_anim" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_speed="0.5"/>
+                        <!-- Increased SOS button -->
+                        <com.google.android.material.button.MaterialButton android:id="@+id/btnSos" android:layout_width="220dp" android:layout_height="220dp" android:layout_gravity="center" android:text="SOS" android:textSize="56sp" android:textStyle="bold" android:textColor="@color/white" app:backgroundTint="@color/sos_red" app:cornerRadius="110dp" app:elevation="24dp"/>
+                    </FrameLayout>
+                    
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="#E6FFFFFF">
+                        
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+                                
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnMic"
+                                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:icon="@android:drawable/ic_btn_speak_now"
+                                    android:text="Hold to Record"
+                                    app:strokeColor="@color/accent_purple"
+                                    android:textColor="@color/accent_purple"
+                                    app:cornerRadius="32dp"
+                                    android:paddingTop="12dp"
+                                    android:paddingBottom="12dp"
+                                    android:layout_marginEnd="16dp"/>
+                                    
+                                <TextView
+                                    android:id="@+id/tvMicTimer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="00:00"
+                                    android:textColor="@color/sos_red"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tap SOS, Shake 5 times, or press Power 3 times" android:textSize="14sp" android:textColor="@color/text_light" android:layout_marginTop="24dp"/>
+
+                    <EditText android:id="@+id/etCustomMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Add custom SOS message (optional)" android:layout_marginTop="32dp" android:background="@drawable/card_bg_soft" android:padding="16dp" android:textSize="14sp" android:textColor="@color/text_dark"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Features Grid -->
+            <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="2" android:padding="8dp">
+                <!-- Fake Call -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardFakeCall" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/card_bg">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/stat_sys_phone_call" android:tint="@color/accent_pink"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fake Call" android:textSize="18sp" android:textColor="@color/text_dark" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Follow Me -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardFollowMe" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/card_bg">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_dialog_map" android:tint="@color/accent_purple"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Follow Me" android:textSize="18sp" android:textColor="@color/text_dark" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Safety Guidelines -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardSafetyTips" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/card_bg">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_dialog_info" android:tint="@color/accent_pink"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Guidelines &amp; Laws" android:textSize="16sp" android:textColor="@color/text_dark" android:textStyle="bold" android:layout_marginTop="12dp" android:textAlignment="center"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Self Defense -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardSelfDefense" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/card_bg">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_media_play" android:tint="@color/accent_purple"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Self Defense" android:textSize="18sp" android:textColor="@color/text_dark" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Contacts -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardContacts" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/card_bg">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_menu_myplaces" android:tint="@color/accent_pink"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contacts" android:textSize="18sp" android:textColor="@color/text_dark" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Settings -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardSettings" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="24dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/card_bg">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_menu_preferences" android:tint="@color/accent_purple"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings" android:textSize="18sp" android:textColor="@color/text_dark" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,190 @@
+[
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_settings.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/xml_provider_paths.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/xml/provider_paths.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.safesafar.app-debug-6:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_follow_me.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_follow_me.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_location_illustration.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/location_illustration.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_self_defense.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_self_defense.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_main.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_video_player.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_video_player.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_sos_glow.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/sos_glow.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_safety_banner.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/safety_banner.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_bg_gradient.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/bg_gradient.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_contacts.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_contacts.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_item_expandable_tip.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/item_expandable_tip.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_safety_tips.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_safety_tips.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_item_short.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/item_short.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_item_contact.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/item_contact.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_circle_bg.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/circle_bg.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/anim_pulse.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/anim/pulse.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_fake_call_setup.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_fake_call_setup.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_dot_green.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/dot_green.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_activity_fake_call.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_fake_call.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_card_bg_soft.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/card_bg_soft.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_rounded_thumbnail_bg.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/rounded_thumbnail_bg.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/anim_blink.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/anim/blink.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/raw_pulse_anim.json.flat",
+        "source": "com.example.safesafar.app-main-7:/raw/pulse_anim.json"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/layout_item_video.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/layout/item_video.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_map_placeholder.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/map_placeholder.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/raw_map_style.json.flat",
+        "source": "com.example.safesafar.app-main-7:/raw/map_style.json"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_bg_gradient_button.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/bg_gradient_button.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.safesafar.app-debug-6:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.safesafar.app-merged_res-5:/drawable_map_gradient_overlay.xml.flat",
+        "source": "com.example.safesafar.app-main-7:/drawable/map_gradient_overlay.xml"
+    }
+]

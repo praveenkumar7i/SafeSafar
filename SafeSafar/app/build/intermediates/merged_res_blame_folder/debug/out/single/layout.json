@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_main.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_fake_call.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_fake_call.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_contacts.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_contacts.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_follow_me.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_follow_me.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_fake_call_setup.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_fake_call_setup.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_self_defense.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_self_defense.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/item_expandable_tip.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/item_expandable_tip.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_settings.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/item_contact.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/item_contact.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/item_video.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/item_video.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/item_short.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/item_short.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_video_player.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_video_player.xml"
+    },
+    {
+        "merged": "com.example.safesafar.app-mergeDebugResources-4:/layout/activity_safety_tips.xml",
+        "source": "com.example.safesafar.app-main-7:/layout/activity_safety_tips.xml"
+    }
+]
