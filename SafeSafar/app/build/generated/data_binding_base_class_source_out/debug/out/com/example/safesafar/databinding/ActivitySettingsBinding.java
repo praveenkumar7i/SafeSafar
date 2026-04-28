@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.safesafar.R;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -24,6 +25,9 @@ public final class ActivitySettingsBinding implements ViewBinding {
   public final AppCompatButton btnBattery;
 
   @NonNull
+  public final MaterialButton btnChooseSiren;
+
+  @NonNull
   public final AppCompatButton btnOpenSettings;
 
   @NonNull
@@ -31,6 +35,9 @@ public final class ActivitySettingsBinding implements ViewBinding {
 
   @NonNull
   public final SwitchMaterial switchFakeCall;
+
+  @NonNull
+  public final SwitchMaterial switchFlashlight;
 
   @NonNull
   public final SwitchMaterial switchPower;
@@ -44,24 +51,23 @@ public final class ActivitySettingsBinding implements ViewBinding {
   @NonNull
   public final SwitchMaterial switchTap;
 
-  @NonNull
-  public final SwitchMaterial switchVoice;
-
   private ActivitySettingsBinding(@NonNull ScrollView rootView, @NonNull AppCompatButton btnBattery,
-      @NonNull AppCompatButton btnOpenSettings, @NonNull SwitchMaterial switchAutoSms,
-      @NonNull SwitchMaterial switchFakeCall, @NonNull SwitchMaterial switchPower,
+      @NonNull MaterialButton btnChooseSiren, @NonNull AppCompatButton btnOpenSettings,
+      @NonNull SwitchMaterial switchAutoSms, @NonNull SwitchMaterial switchFakeCall,
+      @NonNull SwitchMaterial switchFlashlight, @NonNull SwitchMaterial switchPower,
       @NonNull SwitchMaterial switchShake, @NonNull SwitchMaterial switchSiren,
-      @NonNull SwitchMaterial switchTap, @NonNull SwitchMaterial switchVoice) {
+      @NonNull SwitchMaterial switchTap) {
     this.rootView = rootView;
     this.btnBattery = btnBattery;
+    this.btnChooseSiren = btnChooseSiren;
     this.btnOpenSettings = btnOpenSettings;
     this.switchAutoSms = switchAutoSms;
     this.switchFakeCall = switchFakeCall;
+    this.switchFlashlight = switchFlashlight;
     this.switchPower = switchPower;
     this.switchShake = switchShake;
     this.switchSiren = switchSiren;
     this.switchTap = switchTap;
-    this.switchVoice = switchVoice;
   }
 
   @Override
@@ -97,6 +103,12 @@ public final class ActivitySettingsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnChooseSiren;
+      MaterialButton btnChooseSiren = ViewBindings.findChildViewById(rootView, id);
+      if (btnChooseSiren == null) {
+        break missingId;
+      }
+
       id = R.id.btnOpenSettings;
       AppCompatButton btnOpenSettings = ViewBindings.findChildViewById(rootView, id);
       if (btnOpenSettings == null) {
@@ -112,6 +124,12 @@ public final class ActivitySettingsBinding implements ViewBinding {
       id = R.id.switchFakeCall;
       SwitchMaterial switchFakeCall = ViewBindings.findChildViewById(rootView, id);
       if (switchFakeCall == null) {
+        break missingId;
+      }
+
+      id = R.id.switchFlashlight;
+      SwitchMaterial switchFlashlight = ViewBindings.findChildViewById(rootView, id);
+      if (switchFlashlight == null) {
         break missingId;
       }
 
@@ -139,15 +157,9 @@ public final class ActivitySettingsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.switchVoice;
-      SwitchMaterial switchVoice = ViewBindings.findChildViewById(rootView, id);
-      if (switchVoice == null) {
-        break missingId;
-      }
-
-      return new ActivitySettingsBinding((ScrollView) rootView, btnBattery, btnOpenSettings,
-          switchAutoSms, switchFakeCall, switchPower, switchShake, switchSiren, switchTap,
-          switchVoice);
+      return new ActivitySettingsBinding((ScrollView) rootView, btnBattery, btnChooseSiren,
+          btnOpenSettings, switchAutoSms, switchFakeCall, switchFlashlight, switchPower,
+          switchShake, switchSiren, switchTap);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

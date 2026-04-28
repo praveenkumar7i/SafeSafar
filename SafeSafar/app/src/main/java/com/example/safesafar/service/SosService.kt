@@ -16,8 +16,13 @@ import android.os.Vibrator
 import android.os.VibratorManager
 import android.telephony.SmsManager
 import android.util.Log
+import android.hardware.camera2.CameraManager
 import android.media.MediaPlayer
 import android.media.RingtoneManager
+import android.net.Uri
+import android.provider.Settings
+import android.telephony.TelephonyManager
+import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import com.example.safesafar.MainActivity
 import com.example.safesafar.utils.ContactManager
@@ -29,10 +34,14 @@ class SosService : Service() {
     private val CHANNEL_ID = "SafeSafarChannel"
     private lateinit var shakeDetector: ShakeDetector
     private lateinit var powerButtonReceiver: PowerButtonReceiver
-    private var mediaRecorder: MediaRecorder? = null
     private var mediaPlayer: MediaPlayer? = null
 
     private var lastSosTime = 0L
+
+    private var sirenHandler: android.os.Handler? = null
+    private var sirenRunnable: Runnable? = null
+    private var flashHandler: android.os.Handler? = null
+    private var flashRunnable: Runnable? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -59,6 +68,11 @@ class SosService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        val prefs = getSharedPreferences("SafeSafarPrefs", Context.MODE_PRIVATE)
+        if (prefs.getString("pending_sos", null) != null) {
+            startRetryLoop()
+        }
+
         val pendingIntent = PendingIntent.getActivity(this, 0, Intent(this, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE)
 
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
@@ -74,10 +88,6 @@ class SosService : Service() {
             val msg = intent.getStringExtra("CUSTOM_MSG") ?: ""
             val fromButton = intent.getBooleanExtra("FROM_BUTTON", false)
             triggerSosRoutine(msg, fromButton)
-        } else if (intent?.action == "ACTION_RECORD_AUDIO") {
-            startAudioRecording()
-        } else if (intent?.action == "ACTION_SEND_FALLBACK_SMS") {
-            getLocationAndSendSms("Help me! (Voice note shared separately)")
         }
 
         return START_STICKY
@@ -98,8 +108,6 @@ class SosService : Service() {
         if (prefs.getBoolean("auto_sms_enabled", true)) {
             getLocationAndSendSms(customMsg)
         }
-        startAudioRecording()
-        
         if (prefs.getBoolean("auto_fake_call_enabled", false)) {
             android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
                 val fakeCallIntent = Intent(this, com.example.safesafar.ui.FakeCallActivity::class.java).apply {
@@ -112,24 +120,49 @@ class SosService : Service() {
         if (prefs.getBoolean("siren_enabled", false)) {
             playSiren()
         }
+        if (prefs.getBoolean("flashlight_enabled", false)) {
+            startFlashlight()
+        }
     }
 
     private fun playSiren() {
         try {
-            val alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
-            mediaPlayer = MediaPlayer.create(this, alarmUri)
-            mediaPlayer?.isLooping = true
-            mediaPlayer?.start()
-            android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
-                stopSiren()
-            }, 10000)
+            stopSiren() // Stop any currently playing siren and remove old callbacks
+            val prefs = getSharedPreferences("SafeSafarPrefs", Context.MODE_PRIVATE)
+            val customUriString = prefs.getString("custom_siren_uri", null)
+            val uri = if (customUriString != null) Uri.parse(customUriString) else RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
+
+            val audioManager = getSystemService(Context.AUDIO_SERVICE) as android.media.AudioManager
+            audioManager.setStreamVolume(android.media.AudioManager.STREAM_MUSIC, audioManager.getStreamMaxVolume(android.media.AudioManager.STREAM_MUSIC), 0)
+
+            mediaPlayer = MediaPlayer().apply {
+                setDataSource(this@SosService, uri)
+                setAudioStreamType(android.media.AudioManager.STREAM_MUSIC)
+                isLooping = true
+                prepare()
+                start()
+            }
+            sirenHandler = android.os.Handler(android.os.Looper.getMainLooper())
+            sirenRunnable = Runnable { stopSiren() }
+            sirenHandler?.postDelayed(sirenRunnable!!, 15000)
         } catch (e: Exception) {
             e.printStackTrace()
+            try {
+                android.widget.Toast.makeText(this, "Invalid sound file", android.widget.Toast.LENGTH_SHORT).show()
+                val fallbackUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
+                mediaPlayer = MediaPlayer.create(this, fallbackUri)
+                mediaPlayer?.isLooping = true
+                mediaPlayer?.start()
+                sirenHandler = android.os.Handler(android.os.Looper.getMainLooper())
+                sirenRunnable = Runnable { stopSiren() }
+                sirenHandler?.postDelayed(sirenRunnable!!, 15000)
+            } catch (ex: Exception) {}
         }
     }
 
     private fun stopSiren() {
         try {
+            sirenRunnable?.let { sirenHandler?.removeCallbacks(it) }
             mediaPlayer?.stop()
             mediaPlayer?.release()
             mediaPlayer = null
@@ -156,23 +189,32 @@ class SosService : Service() {
                     dispatchSms(location, customMsg)
                 } else {
                     // Last known location unavailable, try current location request
+                    var isResolved = false
                     val locationRequest = com.google.android.gms.location.LocationRequest.Builder(
                         com.google.android.gms.location.Priority.PRIORITY_HIGH_ACCURACY, 2000L
                     ).setMaxUpdates(1).build()
+                    
                     val callback = object : com.google.android.gms.location.LocationCallback() {
                         override fun onLocationResult(result: com.google.android.gms.location.LocationResult) {
-                            val loc = result.lastLocation
-                            if (loc != null) dispatchSms(loc, customMsg)
-                            else sendSms(buildMessage(customMsg, null))
-                            fusedLocationClient.removeLocationUpdates(this)
+                            if (!isResolved) {
+                                isResolved = true
+                                val loc = result.lastLocation
+                                if (loc != null) dispatchSms(loc, customMsg)
+                                else sendSms(buildMessage(customMsg, null))
+                                fusedLocationClient.removeLocationUpdates(this)
+                            }
                         }
                     }
                     fusedLocationClient.requestLocationUpdates(locationRequest, callback, android.os.Looper.getMainLooper())
-                    // Failsafe: send without location after 4s if GPS is slow
+                    
+                    // Failsafe: send without location after 5s if GPS is slow
                     android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
-                        sendSms(buildMessage(customMsg, null))
-                        fusedLocationClient.removeLocationUpdates(callback)
-                    }, 4000)
+                        if (!isResolved) {
+                            isResolved = true
+                            sendSms(buildMessage(customMsg, null))
+                            fusedLocationClient.removeLocationUpdates(callback)
+                        }
+                    }, 5000)
                 }
             }.addOnFailureListener {
                 sendSms(buildMessage(customMsg, null))
@@ -191,44 +233,115 @@ class SosService : Service() {
             "https://maps.google.com/?q=${location.latitude},${location.longitude}"
         else
             "Location unavailable"
-        val timestamp = java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a", java.util.Locale.getDefault())
-            .format(java.util.Date())
-        val base = if (customMsg.isNotBlank()) customMsg else "Help me! I am in danger."
-        return "$base\nMy location:\n$locString\nTime: $timestamp"
+        val base = if (customMsg.isNotBlank()) customMsg else "🚨 EMERGENCY! I need help."
+        return "$base\nMy location:\n$locString"
+    }
+
+    private fun hasCellularSignal(): Boolean {
+        val isAirplaneMode = Settings.Global.getInt(contentResolver, Settings.Global.AIRPLANE_MODE_ON, 0) != 0
+        if (isAirplaneMode) return false
+        val tm = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+        return tm.simState == TelephonyManager.SIM_STATE_READY
+    }
+
+    private var isRetryLoopRunning = false
+    private val retryHandler = android.os.Handler(android.os.Looper.getMainLooper())
+
+    private fun saveSosForRetry(message: String) {
+        val prefs = getSharedPreferences("SafeSafarPrefs", Context.MODE_PRIVATE)
+        prefs.edit().putString("pending_sos", message).apply()
+    }
+
+    private fun startRetryLoop() {
+        if (isRetryLoopRunning) return
+        isRetryLoopRunning = true
+        val retryRunnable = object : Runnable {
+            override fun run() {
+                val prefs = getSharedPreferences("SafeSafarPrefs", Context.MODE_PRIVATE)
+                val pendingSos = prefs.getString("pending_sos", null)
+                if (pendingSos == null) {
+                    isRetryLoopRunning = false
+                    return
+                }
+                if (hasCellularSignal()) {
+                    try {
+                        val contacts = ContactManager.getContacts(this@SosService)
+                        val smsManager = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) getSystemService(SmsManager::class.java) else SmsManager.getDefault()
+                        val parts = smsManager.divideMessage(pendingSos)
+                        for (contact in contacts) {
+                            smsManager.sendMultipartTextMessage(contact.phone, null, parts, null, null)
+                        }
+                        android.os.Handler(android.os.Looper.getMainLooper()).post {
+                            Toast.makeText(this@SosService, "SOS sent successfully", Toast.LENGTH_SHORT).show()
+                        }
+                        prefs.edit().remove("pending_sos").apply()
+                        isRetryLoopRunning = false
+                        return
+                    } catch (e: Exception) {}
+                }
+                retryHandler.postDelayed(this, 30000)
+            }
+        }
+        retryHandler.postDelayed(retryRunnable, 30000)
     }
 
     private fun sendSms(message: String) {
         val contacts = ContactManager.getContacts(this)
         if (contacts.isEmpty()) return
+
+        android.os.Handler(android.os.Looper.getMainLooper()).post {
+            Toast.makeText(this, "Sending SOS via SMS...", Toast.LENGTH_SHORT).show()
+        }
+
+        if (!hasCellularSignal()) {
+            saveSosForRetry(message)
+            android.os.Handler(android.os.Looper.getMainLooper()).post {
+                Toast.makeText(this, "No network. SOS will be sent when network is available", Toast.LENGTH_LONG).show()
+            }
+            startRetryLoop()
+            return
+        }
+
         try {
             val smsManager = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) getSystemService(SmsManager::class.java) else SmsManager.getDefault()
+            val parts = smsManager.divideMessage(message)
             for (contact in contacts) {
-                smsManager.sendTextMessage(contact.phone, null, message, null, null)
+                smsManager.sendMultipartTextMessage(contact.phone, null, parts, null, null)
             }
+            android.os.Handler(android.os.Looper.getMainLooper()).post {
+                Toast.makeText(this, "SOS sent successfully", Toast.LENGTH_SHORT).show()
+            }
+            val prefs = getSharedPreferences("SafeSafarPrefs", Context.MODE_PRIVATE)
+            prefs.edit().remove("pending_sos").apply()
+        } catch (e: Exception) {
+            saveSosForRetry(message)
+            android.os.Handler(android.os.Looper.getMainLooper()).post {
+                Toast.makeText(this, "Will retry when network is available", Toast.LENGTH_SHORT).show()
+            }
+            startRetryLoop()
+        }
+    }
+
+    private fun startFlashlight() {
+        try {
+            stopFlashlight() // Ensure any existing timeout is cancelled
+            val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+            val cameraId = cameraManager.cameraIdList[0]
+            
+            cameraManager.setTorchMode(cameraId, true)
+            
+            flashHandler = android.os.Handler(android.os.Looper.getMainLooper())
+            flashRunnable = Runnable { stopFlashlight() }
+            flashHandler?.postDelayed(flashRunnable!!, 15000)
         } catch (e: Exception) {}
     }
 
-    private fun startAudioRecording() {
+    private fun stopFlashlight() {
         try {
-            val file = File(cacheDir, "sos_audio_${System.currentTimeMillis()}.3gp")
-            mediaRecorder = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) MediaRecorder(this) else MediaRecorder()
-            mediaRecorder?.apply {
-                setAudioSource(MediaRecorder.AudioSource.MIC)
-                setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
-                setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
-                setOutputFile(file.absolutePath)
-                prepare()
-                start()
-            }
-            android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({ stopAudioRecording() }, 15000)
-        } catch (e: Exception) {}
-    }
-
-    private fun stopAudioRecording() {
-        try {
-            mediaRecorder?.stop()
-            mediaRecorder?.release()
-            mediaRecorder = null
+            flashRunnable?.let { flashHandler?.removeCallbacks(it) }
+            val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+            val cameraId = cameraManager.cameraIdList[0]
+            cameraManager.setTorchMode(cameraId, false)
         } catch (e: Exception) {}
     }
 
@@ -243,8 +356,8 @@ class SosService : Service() {
         super.onDestroy()
         shakeDetector.stop()
         unregisterReceiver(powerButtonReceiver)
-        stopAudioRecording()
         stopSiren()
+        stopFlashlight()
     }
 
     override fun onBind(intent: Intent?): IBinder? = null

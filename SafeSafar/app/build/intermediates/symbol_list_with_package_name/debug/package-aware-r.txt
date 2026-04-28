@@ -3013,10 +3013,10 @@ id bounceStart
 id btnAdd
 id btnAnswer
 id btnBattery
+id btnChooseSiren
 id btnDecline
 id btnDelete
 id btnEndCall
-id btnMic
 id btnOpenMap
 id btnOpenSettings
 id btnOpenYouTube
@@ -3189,7 +3189,6 @@ id linear
 id listMode
 id list_item
 id liveDot
-id lottieSosPulse
 id lottie_layer_name
 id m3_side_sheet
 id mapFragment
@@ -3388,11 +3387,11 @@ id submit_area
 id supportScrollUp
 id switchAutoSms
 id switchFakeCall
+id switchFlashlight
 id switchPower
 id switchShake
 id switchSiren
 id switchTap
-id switchVoice
 id tabLayout
 id tabMode
 id tag_accessibility_actions
@@ -3450,7 +3449,6 @@ id tvContent
 id tvHeader
 id tvLastUpdated
 id tvLiveLocation
-id tvMicTimer
 id tvMiniAccuracy
 id tvMiniCoords
 id tvPlayerTitle

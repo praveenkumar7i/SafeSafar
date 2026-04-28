@@ -19,27 +19,27 @@
 13    <uses-permission android:name="android.permission.SEND_SMS" />
 13-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:6:5-67
 13-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:6:22-64
-14    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-14-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:7:5-71
-14-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:7:22-68
-15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-15-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:8:5-77
-15-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:8:22-74
-16    <uses-permission android:name="android.permission.INTERNET" />
-16-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:9:5-67
-16-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:9:22-64
-17    <uses-permission android:name="android.permission.VIBRATE" />
-17-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:10:5-66
-17-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:10:22-63
-18    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-18-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:11:5-75
-18-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:11:22-72
-19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-19-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:12:5-80
-19-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:12:22-77
-20    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-20-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:13:5-95
-20-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:13:22-92
+14    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+14-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:8:5-77
+14-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:8:22-74
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:9:5-67
+15-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:9:22-64
+16    <uses-permission android:name="android.permission.VIBRATE" />
+16-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:10:5-66
+16-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:10:22-63
+17    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+17-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:11:5-75
+17-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:11:22-72
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:12:5-80
+18-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:12:22-77
+19    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+19-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:13:5-95
+19-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:13:22-92
+20    <uses-permission android:name="android.permission.CAMERA" />
+20-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:14:5-65
+20-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:14:22-62
 21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 21-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0] C:\Users\prave\.gradle\caches\transforms-3\c001b48ec7403c06e7148d21203712a7\transformed\jetified-core-12.1.0\AndroidManifest.xml:8:5-79
 21-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0] C:\Users\prave\.gradle\caches\transforms-3\c001b48ec7403c06e7148d21203712a7\transformed\jetified-core-12.1.0\AndroidManifest.xml:8:22-76
@@ -72,125 +72,125 @@
 37-->[androidx.core:core:1.9.0] C:\Users\prave\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 38
 39    <application
-39-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:14:5-45:19
+39-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:15:5-46:19
 40        android:allowBackup="true"
-40-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:15:9-35
+40-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:9-35
 41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 41-->[androidx.core:core:1.9.0] C:\Users\prave\.gradle\caches\transforms-3\f3889f18d4f26e70cef4e17d11226053\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 42        android:debuggable="true"
 43        android:icon="@mipmap/ic_launcher"
-43-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:15:36-70
+43-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:36-70
 44        android:label="@string/app_name"
-44-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:15:71-103
+44-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:71-103
 45        android:roundIcon="@mipmap/ic_launcher_round"
-45-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:9-54
+45-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:9-54
 46        android:supportsRtl="true"
-46-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:55-81
+46-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:55-81
 47        android:testOnly="true"
 48        android:theme="@style/Theme.SafeSafar" >
-48-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:16:82-120
+48-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:82-120
 49        <activity
-49-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:9-22:20
+49-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:18:9-23:20
 50            android:name="com.example.safesafar.MainActivity"
-50-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:19-47
+50-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:18:19-47
 51            android:exported="true"
-51-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:48-71
+51-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:18:48-71
 52            android:theme="@style/Theme.SafeSafar" >
-52-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:17:72-110
+52-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:18:72-110
 53            <intent-filter>
-53-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:18:13-21:29
+53-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:19:13-22:29
 54                <action android:name="android.intent.action.MAIN" />
-54-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:19:17-69
-54-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:19:25-66
+54-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:20:17-69
+54-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:20:25-66
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:20:17-77
-56-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:20:27-74
+56-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:21:17-77
+56-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:21:27-74
 57            </intent-filter>
 58        </activity>
 59        <activity
-59-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:23:9-101
+59-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:9-101
 60            android:name="com.example.safesafar.ui.FakeCallSetupActivity"
-60-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:23:19-59
+60-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:19-59
 61            android:theme="@style/Theme.SafeSafar" />
-61-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:23:60-98
+61-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:60-98
 62        <activity
-62-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:9-96
+62-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:9-96
 63            android:name="com.example.safesafar.ui.FakeCallActivity"
-63-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:19-54
+63-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:19-54
 64            android:theme="@style/Theme.SafeSafar" />
-64-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:24:55-93
+64-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:55-93
 65        <activity
-65-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:9-96
+65-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:9-96
 66            android:name="com.example.safesafar.ui.ContactsActivity"
-66-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:19-54
+66-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:19-54
 67            android:theme="@style/Theme.SafeSafar" />
-67-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:25:55-93
+67-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:55-93
 68        <activity
-68-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:9-96
+68-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:9-96
 69            android:name="com.example.safesafar.ui.FollowMeActivity"
-69-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:19-54
+69-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:19-54
 70            android:theme="@style/Theme.SafeSafar" />
-70-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:26:55-93
+70-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:55-93
 71        <activity
-71-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:9-98
+71-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:9-98
 72            android:name="com.example.safesafar.ui.SafetyTipsActivity"
-72-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:19-56
+72-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:19-56
 73            android:theme="@style/Theme.SafeSafar" />
-73-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:27:57-95
+73-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:57-95
 74        <activity
-74-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:9-99
+74-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:9-99
 75            android:name="com.example.safesafar.ui.SelfDefenseActivity"
-75-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:19-57
+75-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:19-57
 76            android:theme="@style/Theme.SafeSafar" />
-76-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:28:58-96
+76-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:58-96
 77        <activity
-77-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:9-99
+77-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:9-99
 78            android:name="com.example.safesafar.ui.VideoPlayerActivity"
-78-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:19-57
+78-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:19-57
 79            android:theme="@style/Theme.SafeSafar" />
-79-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:29:58-96
+79-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:58-96
 80        <activity
-80-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:9-96
+80-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:9-96
 81            android:name="com.example.safesafar.ui.SettingsActivity"
-81-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:19-54
+81-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:19-54
 82            android:theme="@style/Theme.SafeSafar" />
-82-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:30:55-93
+82-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:55-93
 83
 84        <service
-84-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:9-154
+84-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:32:9-143
 85            android:name="com.example.safesafar.service.SosService"
-85-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:18-52
+85-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:32:18-52
 86            android:enabled="true"
-86-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:53-75
+86-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:32:53-75
 87            android:exported="false"
-87-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:76-100
-88            android:foregroundServiceType="location|microphone" />
-88-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:31:101-152
+87-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:32:76-100
+88            android:foregroundServiceType="location" />
+88-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:32:101-141
 89
 90        <provider
 91            android:name="androidx.core.content.FileProvider"
-91-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:34:13-62
+91-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:35:13-62
 92            android:authorities="com.example.safesafar.provider"
-92-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:35:13-60
+92-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:36:13-60
 93            android:exported="false"
-93-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:36:13-37
+93-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:37:13-37
 94            android:grantUriPermissions="true" >
-94-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:37:13-47
+94-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:38:13-47
 95            <meta-data
-95-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:38:13-40:58
+95-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:39:13-41:58
 96                android:name="android.support.FILE_PROVIDER_PATHS"
-96-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:39:17-67
+96-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:40:17-67
 97                android:resource="@xml/provider_paths" />
-97-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:40:17-55
+97-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:41:17-55
 98        </provider>
 99
 100        <meta-data
-100-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:42:9-44:44
+100-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:43:9-45:44
 101            android:name="com.google.android.geo.API_KEY"
-101-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:43:13-58
+101-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:44:13-58
 102            android:value="YOUR_API_KEY" />
-102-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:44:13-41
+102-->C:\Users\prave\.gemini\antigravity\scratch\SafeSafar_Updated\SafeSafar\app\src\main\AndroidManifest.xml:45:13-41
 103        <!-- Needs to be explicitly declared on P+ -->
 104        <uses-library
 104-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\prave\.gradle\caches\transforms-3\736e6afd92a5ebfdc8f7c72621402386\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40

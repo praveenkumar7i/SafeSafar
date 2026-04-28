@@ -38,9 +38,26 @@ class SettingsActivity : AppCompatActivity() {
         bindSwitch(R.id.switchPower, "power_enabled", true)
         bindSwitch(R.id.switchTap, "tap_enabled", true)
         bindSwitch(R.id.switchAutoSms, "auto_sms_enabled", true)
-        bindSwitch(R.id.switchVoice, "voice_enabled", true)
         bindSwitch(R.id.switchFakeCall, "auto_fake_call_enabled", false)
         bindSwitch(R.id.switchSiren, "siren_enabled", false)
+        bindSwitch(R.id.switchFlashlight, "flashlight_enabled", false)
+
+        val pickAudioLauncher = registerForActivityResult(androidx.activity.result.contract.ActivityResultContracts.OpenDocument()) { uri: Uri? ->
+            if (uri != null) {
+                try {
+                    contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+                prefs.edit().putString("custom_siren_uri", uri.toString()).apply()
+                android.widget.Toast.makeText(this, "Custom siren selected", android.widget.Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        val btnChooseSiren = findViewById<MaterialButton>(R.id.btnChooseSiren)
+        btnChooseSiren?.setOnClickListener {
+            pickAudioLauncher.launch(arrayOf("audio/*"))
+        }
 
         val btnOpenSettings = findViewById<android.widget.Button?>(R.id.btnOpenSettings)
         btnOpenSettings?.setOnClickListener {

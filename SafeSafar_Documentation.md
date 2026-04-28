@@ -102,7 +102,66 @@ The application is built natively for Android to ensure maximum hardware integra
 
 ---
 
-## 7. Future Improvements
+## 7. 🔥 Newly Added Features
+
+- Custom Siren Sound Selection
+- Flashlight SOS Alert
+- Offline SMS Support (No Internet Required)
+- Auto Retry SOS System
+- Shake Detection (5 times)
+- Power Button Double Press SOS
+- Siren + Flashlight 15-second Emergency Alert
+
+---
+
+## 8. ⚙️ How These Features Work
+
+### 📩 SMS without Internet
+- Uses Android SmsManager API
+- Works on mobile network (SIM), not internet
+- Sends emergency message directly via telecom network
+
+### 📍 Location without Internet
+- Uses GPS (FusedLocationProviderClient / LocationManager)
+- GPS works via satellites, no internet needed
+- Generates Google Maps link using coordinates
+
+### 🔊 Siren System
+- Uses MediaPlayer
+- Plays user-selected or default alarm sound
+
+### 🔦 Flashlight Alert
+- Uses CameraManager (Camera2 API)
+- Activates torch mode during SOS
+
+### 📡 Why It Works Without Internet
+- SMS uses cellular network (2G/3G/4G)
+- GPS uses satellite signals
+- No dependency on WiFi or mobile data
+
+---
+
+## 9. 🧠 Technologies Used
+
+- Kotlin (Android Development)
+- Android SDK
+- SmsManager API
+- Location Services (GPS)
+- MediaPlayer API
+- Camera2 API (Flashlight)
+- SharedPreferences
+
+---
+
+## 10. 🚨 Real-World Advantage
+
+- Works in low network / 2G areas
+- Works without internet
+- Useful in rural, highway, emergency situations
+
+---
+
+## 11. Future Improvements
 
 *   **Cloud Backup**: Implement Firebase Realtime Database to securely sync trusted contacts and backup audio evidence off-device.
 *   **Real-time Web Dashboard**: Generate a unique live-tracking web link sent in the SMS so contacts can watch the user's movement dynamically on a map.
@@ -112,6 +171,6 @@ The application is built natively for Android to ensure maximum hardware integra
 
 ---
 
-## 8. Conclusion
+## 12. Conclusion
 
 SafeSafar is not just an application; it is a vital tool designed to bridge the gap between encountering danger and receiving help. By successfully navigating complex Android hardware lifecycle constraints—such as background sensor persistence, secure file sharing via content providers, and real-time location tracking—the application stands as a robust, production-ready solution for personal safety. Its scalable architecture ensures that it can continuously evolve to integrate even more advanced preventative technologies in the future.

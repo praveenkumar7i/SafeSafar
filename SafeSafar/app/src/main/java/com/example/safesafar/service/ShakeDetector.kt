@@ -15,11 +15,15 @@ class ShakeDetector(context: Context, private val onShake: () -> Unit) : SensorE
     private var shakeCount = 0
     private var lastShakeTime: Long = 0
     private val SHAKE_THRESHOLD = 12.0f
-    private val SHAKE_TIMEOUT = 3000L
+    private val SHAKE_TIMEOUT = 2000L // 2 seconds inactivity
+    private val SHAKE_DEBOUNCE = 300L
+
+    private val gravity = FloatArray(3)
+    private val linear_acceleration = FloatArray(3)
 
     fun start() {
         accelerometer?.let {
-            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_UI)
+            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_GAME)
         }
     }
 
@@ -30,20 +34,34 @@ class ShakeDetector(context: Context, private val onShake: () -> Unit) : SensorE
     override fun onSensorChanged(event: SensorEvent?) {
         if (event == null) return
 
-        val x = event.values[0]
-        val y = event.values[1]
-        val z = event.values[2]
+        val alpha = 0.8f
 
-        val force = sqrt(x * x + y * y + z * z)
+        // Apply low-pass filter to smooth readings and isolate gravity
+        gravity[0] = alpha * gravity[0] + (1 - alpha) * event.values[0]
+        gravity[1] = alpha * gravity[1] + (1 - alpha) * event.values[1]
+        gravity[2] = alpha * gravity[2] + (1 - alpha) * event.values[2]
 
-        if (force > SHAKE_THRESHOLD) {
-            val now = System.currentTimeMillis()
-            
-            if (shakeCount > 0 && (now - lastShakeTime) > SHAKE_TIMEOUT) {
-                shakeCount = 0
-            }
+        // High-pass filter to remove gravity
+        linear_acceleration[0] = event.values[0] - gravity[0]
+        linear_acceleration[1] = event.values[1] - gravity[1]
+        linear_acceleration[2] = event.values[2] - gravity[2]
 
-            if (now - lastShakeTime > 300 || shakeCount == 0) { 
+        val x = linear_acceleration[0]
+        val y = linear_acceleration[1]
+        val z = linear_acceleration[2]
+
+        val shakeForce = sqrt(x * x + y * y + z * z)
+
+        val now = System.currentTimeMillis()
+
+        // Reset shakeCount after 2 seconds inactivity
+        if (shakeCount > 0 && (now - lastShakeTime) > SHAKE_TIMEOUT) {
+            shakeCount = 0
+        }
+
+        if (shakeForce > SHAKE_THRESHOLD) {
+            // Debounce: ignore shakes within 300ms interval
+            if (now - lastShakeTime > SHAKE_DEBOUNCE || shakeCount == 0) { 
                 lastShakeTime = now
                 shakeCount++
                 

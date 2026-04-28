@@ -11,13 +11,13 @@ class PowerButtonReceiver(private val onTrigger: () -> Unit) : BroadcastReceiver
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == Intent.ACTION_SCREEN_ON || intent.action == Intent.ACTION_SCREEN_OFF) {
             val now = System.currentTimeMillis()
-            if (now - lastPressTime > 3000) {
-                pressCount = 0 // Reset if more than 3 seconds between presses
+            if (now - lastPressTime > 1500) {
+                pressCount = 0 // Reset if more than 1.5 seconds between presses
             }
             lastPressTime = now
             pressCount++
             
-            if (pressCount >= 3) {
+            if (pressCount >= 2) {
                 onTrigger()
                 pressCount = 0
             }

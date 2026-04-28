@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.airbnb.lottie.LottieAnimationView;
 import com.example.safesafar.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
@@ -23,9 +22,6 @@ import java.lang.String;
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   private final CoordinatorLayout rootView;
-
-  @NonNull
-  public final MaterialButton btnMic;
 
   @NonNull
   public final MaterialButton btnSos;
@@ -55,23 +51,15 @@ public final class ActivityMainBinding implements ViewBinding {
   public final FloatingActionButton fabEmergency;
 
   @NonNull
-  public final LottieAnimationView lottieSosPulse;
-
-  @NonNull
-  public final TextView tvMicTimer;
-
-  @NonNull
   public final TextView tvTicker;
 
-  private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull MaterialButton btnMic,
-      @NonNull MaterialButton btnSos, @NonNull MaterialCardView cardContacts,
-      @NonNull MaterialCardView cardFakeCall, @NonNull MaterialCardView cardFollowMe,
-      @NonNull MaterialCardView cardSafetyTips, @NonNull MaterialCardView cardSelfDefense,
-      @NonNull MaterialCardView cardSettings, @NonNull EditText etCustomMessage,
-      @NonNull FloatingActionButton fabEmergency, @NonNull LottieAnimationView lottieSosPulse,
-      @NonNull TextView tvMicTimer, @NonNull TextView tvTicker) {
+  private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull MaterialButton btnSos,
+      @NonNull MaterialCardView cardContacts, @NonNull MaterialCardView cardFakeCall,
+      @NonNull MaterialCardView cardFollowMe, @NonNull MaterialCardView cardSafetyTips,
+      @NonNull MaterialCardView cardSelfDefense, @NonNull MaterialCardView cardSettings,
+      @NonNull EditText etCustomMessage, @NonNull FloatingActionButton fabEmergency,
+      @NonNull TextView tvTicker) {
     this.rootView = rootView;
-    this.btnMic = btnMic;
     this.btnSos = btnSos;
     this.cardContacts = cardContacts;
     this.cardFakeCall = cardFakeCall;
@@ -81,8 +69,6 @@ public final class ActivityMainBinding implements ViewBinding {
     this.cardSettings = cardSettings;
     this.etCustomMessage = etCustomMessage;
     this.fabEmergency = fabEmergency;
-    this.lottieSosPulse = lottieSosPulse;
-    this.tvMicTimer = tvMicTimer;
     this.tvTicker = tvTicker;
   }
 
@@ -113,12 +99,6 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnMic;
-      MaterialButton btnMic = ViewBindings.findChildViewById(rootView, id);
-      if (btnMic == null) {
-        break missingId;
-      }
-
       id = R.id.btnSos;
       MaterialButton btnSos = ViewBindings.findChildViewById(rootView, id);
       if (btnSos == null) {
@@ -173,27 +153,15 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.lottieSosPulse;
-      LottieAnimationView lottieSosPulse = ViewBindings.findChildViewById(rootView, id);
-      if (lottieSosPulse == null) {
-        break missingId;
-      }
-
-      id = R.id.tvMicTimer;
-      TextView tvMicTimer = ViewBindings.findChildViewById(rootView, id);
-      if (tvMicTimer == null) {
-        break missingId;
-      }
-
       id = R.id.tvTicker;
       TextView tvTicker = ViewBindings.findChildViewById(rootView, id);
       if (tvTicker == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((CoordinatorLayout) rootView, btnMic, btnSos, cardContacts,
+      return new ActivityMainBinding((CoordinatorLayout) rootView, btnSos, cardContacts,
           cardFakeCall, cardFollowMe, cardSafetyTips, cardSelfDefense, cardSettings,
-          etCustomMessage, fabEmergency, lottieSosPulse, tvMicTimer, tvTicker);
+          etCustomMessage, fabEmergency, tvTicker);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
