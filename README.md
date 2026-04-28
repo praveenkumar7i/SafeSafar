@@ -371,44 +371,6 @@ val techStack = listOf(
 
 ---
 
-## 🔧 Challenges & Engineering Solutions
-
-### ⚠️ Challenge 1: WhatsApp "File Format Not Supported" Error
-
-| | Detail |
-|---|---|
-| **Issue** | `.3gp` / `AMR_NB` recordings were rejected by WhatsApp. Releasing recorder too early produced 0-byte corrupt files. |
-| **Solution** | Migrated to `MPEG_4` + `AAC` encoders. Implemented strict `stop() → reset() → release()` teardown with a **500ms postDelayed buffer** before opening share intent. |
-
----
-
-### ⚠️ Challenge 2: Scoped Storage Permission Walls
-
-| | Detail |
-|---|---|
-| **Issue** | Android 11+ blocks free external storage writes, causing silent failures. |
-| **Solution** | Removed `WRITE_EXTERNAL_STORAGE` entirely. Redirected saves to `cacheDir` (internal). Used `FileProvider` to grant temporary read access to third-party apps. |
-
----
-
-### ⚠️ Challenge 3: Background Service Termination
-
-| | Detail |
-|---|---|
-| **Issue** | Android battery managers frequently killed the shake detection service. |
-| **Solution** | Elevated to **Foreground Service** with persistent notification. Added button to route users to system settings → "Disable Battery Optimization" for SafeSafar. |
-
----
-
-### ⚠️ Challenge 4: Microphone Hardware Locking
-
-| | Detail |
-|---|---|
-| **Issue** | Recording crashed if button tapped too fast before hardware initialized, or if another app held mic focus. |
-| **Solution** | Added **200ms delayed start buffer** and forced `AudioManager` to request `AUDIOFOCUS_GAIN_TRANSIENT`. |
-
----
-
 ## 🚀 Future Improvements
 
 | Feature | Description |
