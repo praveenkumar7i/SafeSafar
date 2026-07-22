@@ -55,23 +55,21 @@ In high-stress emergency situations, manually unlocking a phone, finding contact
 <h3 align="center">SafeSafar User Interface</h3>
 
 <p align="center">
-  <img src="SafeSafar/safe_safer/home.png.jpeg" width="220"/>
-  <img src="SafeSafar/safe_safer/settings.png.jpeg" width="220"/>
-  <img src="SafeSafar/safe_safer/follow_me.png.jpeg" width="220"/>
+  <img src="SafeSafar/safe_safer/home.png.jpeg" width="220" hspace="10"/>
+  <img src="SafeSafar/safe_safer/settings.png.jpeg" width="220" hspace="10"/>
+  <img src="SafeSafar/safe_safer/follow_me.png.jpeg" width="220" hspace="10"/>
 </p>
 
-<p align="center">
-  <img src="SafeSafar/safe_safer/fake_call_setup.png.jpeg" width="220"/>
-  <img src="SafeSafar/safe_safer/fake_call.png.jpeg" width="220"/>
-</p>
+<br>
 
 <p align="center">
-  <img src="SafeSafar/safe_safer/self_defense.png.jpeg" width="220"/>
-  <img src="SafeSafar/safe_safer/video_tutorials.png.jpeg" width="220"/>
+  <img src="SafeSafar/safe_safer/fake_call_setup.png.jpeg" width="180" hspace="8"/>
+  <img src="SafeSafar/safe_safer/fake_call.png.jpeg" width="180" hspace="8"/>
+  <img src="SafeSafar/safe_safer/video_tutorials.png.jpeg" width="180" hspace="8"/>
+  <img src="SafeSafar/safe_safer/self_defense.png.jpeg" width="180" hspace="8"/>
 </p>
 
 ---
-
 ## 🔴 The Problem It Solves
 
 | Situation | Without SafeSafar | With SafeSafar |
