@@ -55,19 +55,19 @@ In high-stress emergency situations, manually unlocking a phone, finding contact
 <h3 align="center">SafeSafar User Interface</h3>
 
 <p align="center">
-  <img src="screenshots/home.png" width="220"/>
-  <img src="screenshots/settings.png" width="220"/>
-  <img src="screenshots/follow_me.png" width="220"/>
+  <img src="SafeSafar/safe_safer/home.png.jpeg" width="220"/>
+  <img src="SafeSafar/safe_safer/settings.png.jpeg" width="220"/>
+  <img src="SafeSafar/safe_safer/follow_me.png.jpeg" width="220"/>
 </p>
 
 <p align="center">
-  <img src="screenshots/fake_call_setup.png" width="220"/>
-  <img src="screenshots/fake_call.png" width="220"/>
+  <img src="SafeSafar/safe_safer/fake_call_setup.png.jpeg" width="220"/>
+  <img src="SafeSafar/safe_safer/fake_call.png.jpeg" width="220"/>
 </p>
 
 <p align="center">
-  <img src="screenshots/self_defense.png" width="220"/>
-  <img src="screenshots/video_tutorials.png" width="220"/>
+  <img src="SafeSafar/safe_safer/self_defense.png.jpeg" width="220"/>
+  <img src="SafeSafar/safe_safer/video_tutorials.png.jpeg" width="220"/>
 </p>
 
 ---
