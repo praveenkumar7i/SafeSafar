@@ -48,6 +48,29 @@
 In high-stress emergency situations, manually unlocking a phone, finding contacts, dialing numbers, or sending location data is often **impossible**. SafeSafar automates this entire process — allowing users to trigger a full-scale emergency response **discreetly and instantly** via a button tap, phone shake, or power button press.
 
 ---
+---
+
+# 📸 App Screenshots
+
+<h3 align="center">SafeSafar User Interface</h3>
+
+<p align="center">
+  <img src="screenshots/home.png" width="220"/>
+  <img src="screenshots/settings.png" width="220"/>
+  <img src="screenshots/follow_me.png" width="220"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/fake_call_setup.png" width="220"/>
+  <img src="screenshots/fake_call.png" width="220"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/self_defense.png" width="220"/>
+  <img src="screenshots/video_tutorials.png" width="220"/>
+</p>
+
+---
 
 ## 🔴 The Problem It Solves
 
